@@ -1,26 +1,26 @@
-Tryhackme Room Address
+#Tryhackme Room Address
 
 https://tryhackme.com/room/django
 
 -----------
 
-Task 1:
+##Task 1:
 
 Learning Python can be extremely useful for penetration testers and a simple understanding of its frameworks can be a key to success. In this lesson, we are going to learn about one of the best ones ever made: Django. 
 
 -----------
 
-Task 2:
+##Task 2:
 
-#1
+###1
 python3 manage.py startapp Forms
 
-#2
+###2
 python3 manage.py runserver 0.0.0.0:8000
 
 -----------
 
-Task 3:
+##Task 3:
 
 Create an app using a command from Unit 2 and call it whatever you like. I will be using 'Articles' for this lesson.
 
@@ -28,15 +28,15 @@ Head over to settings.py and include your app name in *INSTALLED_APPS*:
 
 -----------
 
-Task 4:
+##Task 4:
 
-#1
+###1
 flag from the github page
 THM{g1t_djang0_hUb}
 
 -----------
 
-Task 5:
+##Task 5:
 
 Now it's time for a small CTF!
 
@@ -45,7 +45,7 @@ some credentials given
 Username: django-admin
 Password: roottoor1212
 
-#Enumeration
+##Enumeration
 
 nmap -sC -sV -oN nmap/django_scan <machine_IP>
 
@@ -56,7 +56,7 @@ scan runs we can visit http://<Machine IP>:8000
 	we see a Django page with lots of messages about DISALLOWED HOSTS
 So to access it we need to add the machine ip to the allowed hosts
 
-#1: Admin panel flag
+###1: Admin panel flag
 
 with the given credentials we cn ssh into the machine
 
@@ -91,7 +91,7 @@ Back on the admin page, you can use those credentials to login.
 here your first flag
 
 
-#2 : user flag?
+###2 : user flag?
 
 you have many options here 
 
@@ -121,7 +121,7 @@ you can open a new ssh shell and get the flag
 or change the current user with su command
 
 
-#3 : Hidden Flag
+###3 : Hidden Flag
 
 there are many ways of getting flag
 
