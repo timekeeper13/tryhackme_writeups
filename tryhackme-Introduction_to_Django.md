@@ -94,7 +94,7 @@ run ls -la /home you can see that you have access to another user's home folder
 
 **ls -la /home  
 cd /home/StrangeFox  
-ls  https://tryhackme.com/room/django
+ls    
 cat user.txt  
 THM{xxx}**  
 
