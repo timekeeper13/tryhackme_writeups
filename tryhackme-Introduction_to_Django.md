@@ -16,7 +16,7 @@ Learning Python can be extremely useful for penetration testers and a simple und
 python3 manage.py startapp Forms
 
 ### 2
-**python3 manage.py runserver 0.0.0.0:8000**
+> **python3 manage.py runserver 0.0.0.0:8000**
 
 -----------
 
@@ -41,12 +41,12 @@ Now it's time for a small CTF!
 
 some credentials given
 
-**Username: django-admin
-Password: roottoor1212**
+> **Username: django-admin  
+> Password: roottoor1212**
 
 ## Enumeration
 
-**nmap -sC -sV -oN nmap/django_scan <machine_IP>**
+> **nmap -sC -sV -oN nmap/django_scan <machine_IP>**
 
 We can see SSH running on port 22
 and http-alt running on 8000
@@ -60,7 +60,7 @@ So to access it we need to add the machine ip to the allowed hosts
 with the given credentials we cn ssh into the machine  
 and change the line in the settings file   
 
-**ALLOWED_HOSTS = ['0.0.0.0', '10.10.147.62']**  
+> **ALLOWED_HOSTS = ['0.0.0.0', '10.10.147.62']**  
 
 include our machine ip to accesshttps://tryhackme.com/room/django it in browser  
 we can now visit the admin login page   http://<machine IP>:8000/admin  
@@ -68,15 +68,17 @@ we have many options to login
 
 --> we can change the password of current admin
 
+```
 with **python3 manage.py changepassword <admin_name >**
 and then with that new password we can login to admin portal  
 but this is not the recommended way
+```
 
 -->we can create a super user
 
-Navigate to **/home/django-admin/messagebox/**  
+Navigate to > **/home/django-admin/messagebox/**  
 Execute the command to create the superuser  
-**python3 manage.py createsuperuser**   
+> **python3 manage.py createsuperuser**   
 Back on the admin page, you can use those credentials to login.  
 here is your first flag  
 
@@ -88,23 +90,23 @@ you have many options here
 -->   
 Once you are logged in as django-admin
 run ls -la /home you can see that you have access to another user's home folder  
- **StrangeFox**   
+ > **StrangeFox**   
  Let's get his flag!
 
-
+```
 **ls -la /home  
 cd /home/StrangeFox  
 ls    
 cat user.txt  
 THM{xxx}**  
-
+```
 --> OR  
 you can find a password hash link on the page
 
-StrangeFox         Password hash: **https://pastebin.com/nmKt4BSf**  
+StrangeFox         Password hash: > **https://pastebin.com/nmKt4BSf**  
 
 visit the link and get the link   
-crack it with crackctation **https://crackstation.net/**  
+crack it with crackctation > **https://crackstation.net/**  
 
 with the credentials   
 
@@ -120,7 +122,7 @@ there are many ways of getting flag
 
 get to the home page and   
 
-**grep -r 'THM'**
+> **grep -r 'THM'**
 there is your flag  
 
 -->  OR  
