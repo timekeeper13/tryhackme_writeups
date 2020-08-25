@@ -68,20 +68,21 @@ we have many options to login
 
 --> we can change the password of current admin
 
-with > **python3 manage.py changepassword <admin_name >**
+with  **python3 manage.py changepassword <admin_name >**
 and then with that new password we can login to admin portal  
 but this is not the recommended way
 
 
 -->we can create a super user
 
-Navigate to > **/home/django-admin/messagebox/**  
-Execute the command to create the superuser  
+Navigate to  *** /home/django-admin/messagebox/***  
+Execute the command to create the superuser   
 > **python3 manage.py createsuperuser**   
+
 Back on the admin page, you can use those credentials to login.  
 here is your first flag  
 
-
+!
 ### 2 : user flag?
 
 you have many options here 
@@ -89,7 +90,7 @@ you have many options here
 -->   
 Once you are logged in as django-admin
 run ls -la /home you can see that you have access to another user's home folder  
- > **StrangeFox**   
+ > **StrangeFox**     
  Let's get his flag!
 
 
@@ -102,10 +103,10 @@ run ls -la /home you can see that you have access to another user's home folder
 --> OR  
 you can find a password hash link on the page
 
-StrangeFox         Password hash: > **https://pastebin.com/nmKt4BSf**  
+StrangeFox         Password hash:   > ***https://pastebin.com/nmKt4BSf***  
 
 visit the link and get the link   
-crack it with crackctation > **https://crackstation.net/**  
+crack it with crackctation   > >**https://crackstation.net/**>  
 
 with the credentials   
 
