@@ -68,11 +68,10 @@ we have many options to login
 
 --> we can change the password of current admin
 
-```
-with **python3 manage.py changepassword <admin_name >**
+with > **python3 manage.py changepassword <admin_name >**
 and then with that new password we can login to admin portal  
 but this is not the recommended way
-```
+
 
 -->we can create a super user
 
@@ -93,13 +92,13 @@ run ls -la /home you can see that you have access to another user's home folder
  > **StrangeFox**   
  Let's get his flag!
 
-```
-**ls -la /home  
-cd /home/StrangeFox  
-ls    
-cat user.txt  
-THM{xxx}**  
-```
+
+> **ls -la /home  
+> cd /home/StrangeFox  
+> ls    
+> cat user.txt  
+> THM{xxx}**  
+
 --> OR  
 you can find a password hash link on the page
 
