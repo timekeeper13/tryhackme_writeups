@@ -90,7 +90,8 @@ you have many options here
 -->   
 Once you are logged in as django-admin
 run ls -la /home you can see that you have access to another user's home folder  
- > **StrangeFox**     
+ > **StrangeFox**   
+ 
  Let's get his flag!
 
 
@@ -103,10 +104,10 @@ run ls -la /home you can see that you have access to another user's home folder
 --> OR  
 you can find a password hash link on the page
 
-StrangeFox         Password hash:   > ***https://pastebin.com/nmKt4BSf***  
+StrangeFox         Password hash:    ***https://pastebin.com/nmKt4BSf***  
 
 visit the link and get the link   
-crack it with crackctation   > >**https://crackstation.net/**>  
+crack it with crackctation   **https://crackstation.net/**  
 
 with the credentials   
 
