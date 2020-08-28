@@ -1,4 +1,4 @@
-#Tryhackme Room Link  
+# Tryhackme Room Link  
 
 ***https://tryhackme.com/room/tartaraus***  
 
@@ -82,8 +82,6 @@ Nmap done: 1 IP address (1 host up) scanned in 46.73 seconds
 
 lets visit port 80
 
-http://<machine ip > 
-
 we can see the default apache page nothing is there  
 
 just run the gobuster and we find  
@@ -150,9 +148,9 @@ mget yougotgoodeyes.txt?
 > **/sUp3r-s3cr3t **  
 
 looks like its a directory  
-
-> **http://<machine ip>//sUp3r-s3cr3t **
-
+```
+http://<machine ip>/sUp3r-s3cr3t
+```
 we get a login page  
 
 
@@ -291,29 +289,30 @@ now we have a fully interactive shell
 now look into the crontab  
 
 ```
+```
 d4rckh@ubuntu-xenial:/home/d4rckh$ cat /etc/crontab
-# /etc/crontab: system-wide crontab
-# Unlike any other crontab you don't have to run the `crontab'
-# command to install the new version when you edit this file
-# and files in /etc/cron.d. These files also have username fields,
-# that none of the other crontabs do.
+ /etc/crontab: system-wide crontab
+ Unlike any other crontab you don't have to run the crontab
+ command to install the new version when you edit this file
+ and files in /etc/cron.d. These files also have username fields,
+ that none of the other crontabs do.
 
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
-# m h dom mon dow user	command
+ m h dom mon dow user	command
 */2 *   * * *   root    python /home/d4rckh/cleanup.py
 17 *	* * *	root    cd / && run-parts --report /etc/cron.hourly
 25 6	* * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
 47 6	* * 7	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.weekly )
 52 6	1 * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
-
 ```
+
 
 lets cat out cleanup.py  
 ```
 d4rckh@ubuntu-xenial:/home/d4rckh$ cat cleanup.py 
-# -*- coding: utf-8 -*-
+ -*- coding: utf-8 -*-
 #!/usr/bin/env python
 import os
 import sys
