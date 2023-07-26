@@ -1,4 +1,4 @@
-# Tryhackme room address
+# Tryhackme easyctf
 
 ***https://tryhackme.com/room/easyctf***
 
